@@ -1,956 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beyond The Horizon — Leadership Coach & Keynote Speaker</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saleema Vellani | Leadership Coach &amp; Speaker</title>
+  <meta name="description" content="Saleema Vellani is a CEO coach, international keynote speaker, and bestselling author helping leaders transform their impact through authentic leadership.">
+  <meta name="keywords" content="leadership coach, executive coaching, keynote speaker, CEO coach, leadership books, leadership courses">
+  <meta name="author" content="Saleema Vellani">
+  <link rel="canonical" href="https://www.saleemavellani.com/">
 
-:root {
-  --deep-crimson: #8B0000;
-  --metallic-gold: #C9A24A;
-  --metallic-gold-light: #F2D16B;
-  --midnight-navy: #0E1A2B;
-  --warm-champagne: #F5EFE3;
-  --soft-gray: #8A8A85;
-  --pure-white: #FFFFFF;
-  --gold-gradient: linear-gradient(135deg, #C9A24A 0%, #F2D16B 50%, #C9A24A 100%);
-  --navy-gradient: linear-gradient(180deg, #0E1A2B 0%, #1a2d47 100%);
-}
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Saleema Vellani">
+  <meta property="og:title" content="Saleema Vellani | Leadership Coach & Speaker">
+  <meta property="og:description" content="Transform your leadership, scale your business, and create the life you've always imagined with proven strategies from CEO coach Saleema Vellani.">
+  <meta property="og:image" content="images/og-cover.jpg">
+  <meta property="og:url" content="https://www.saleemavellani.com/">
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Saleema Vellani | Leadership Coach & Speaker">
+  <meta name="twitter:description" content="Transform your leadership, scale your business, and create the life you've always imagined with proven strategies from CEO coach Saleema Vellani.">
+  <meta name="twitter:image" content="images/og-cover.jpg">
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--midnight-navy);
-  background: var(--warm-champagne);
-  overflow-x: hidden;
-  line-height: 1.6;
-}
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238c0d24'/%3E%3Ctext x='50' y='69' font-size='58' font-family='Arial, sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/fonts.css">
 
-/* NAVIGATION */
-.nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  padding: 20px 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.4s ease;
-}
-.nav.scrolled {
-  background: rgba(14, 26, 43, 0.95);
-  backdrop-filter: blur(20px);
-  padding: 15px 60px;
-  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
-}
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-.nav-logo svg { width: 42px; height: 42px; }
-.nav-logo-text {
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--pure-white);
-}
-.nav-links {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-}
-.nav-links a {
-  color: var(--pure-white);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  position: relative;
-  padding: 5px 0;
-  transition: color 0.3s;
-}
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0;
-  width: 0; height: 2px;
-  background: var(--gold-gradient);
-  transition: width 0.3s ease;
-}
-.nav-links a:hover::after { width: 100%; }
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-.nav-linkedin {
-  color: var(--pure-white);
-  transition: color 0.3s, transform 0.3s;
-}
-.nav-linkedin:hover {
-  color: var(--metallic-gold-light);
-  transform: translateY(-2px);
-}
-.mobile-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 5px;
-}
-.mobile-toggle span {
-  width: 28px;
-  height: 2px;
-  background: var(--pure-white);
-  transition: all 0.3s;
-}
-
-/* BACKGROUNDS */
-.bg-navy {
-  background: var(--midnight-navy);
-  color: var(--pure-white);
-}
-.bg-navy-diamond {
-  background-color: var(--midnight-navy);
-  background-image: 
-    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(201,162,74,0.04) 35px, rgba(201,162,74,0.04) 70px),
-    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(201,162,74,0.04) 35px, rgba(201,162,74,0.04) 70px);
-}
-.bg-champagne {
-  background: var(--warm-champagne);
-  color: var(--deep-crimson);
-}
-.bg-champagne h1, .bg-champagne h2, .bg-champagne h3 { color: var(--deep-crimson); }
-.bg-champagne p { color: var(--midnight-navy); }
-
-/* TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.1; }
-.text-gold {
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.text-crimson { color: var(--deep-crimson); }
-.text-white { color: var(--pure-white); }
-.text-gray { color: var(--soft-gray); }
-.label {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-/* BUTTONS */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 36px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-.btn-gold {
-  background: var(--gold-gradient);
-  color: var(--midnight-navy);
-}
-.btn-gold:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(201, 162, 74, 0.4);
-}
-.btn-outline {
-  background: transparent;
-  color: var(--pure-white);
-  border: 2px solid var(--metallic-gold);
-}
-.btn-outline:hover {
-  background: var(--gold-gradient);
-  color: var(--midnight-navy);
-  border-color: transparent;
-}
-.btn-crimson {
-  background: var(--deep-crimson);
-  color: var(--warm-champagne);
-}
-.btn-crimson:hover {
-  background: #6b0000;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
-}
-
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(201,162,74,0.15);
-  border-radius: 4px;
-  padding: 40px;
-  transition: all 0.4s ease;
-}
-.card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(201,162,74,0.4);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-}
-.card-champagne {
-  background: var(--pure-white);
-  border: 1px solid rgba(139,0,0,0.1);
-}
-.card-champagne:hover {
-  border-color: rgba(139,0,0,0.3);
-  box-shadow: 0 20px 60px rgba(139,0,0,0.1);
-}
-
-/* ANIMATIONS */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-.animate-fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.animate-fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-
-/* SECTIONS */
-.section { padding: 120px 60px; position: relative; }
-.section-narrow { max-width: 1200px; margin: 0 auto; }
-.section-wide { max-width: 1400px; margin: 0 auto; }
-
-/* GRID */
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-
-/* FORMS */
-.form-group { margin-bottom: 24px; }
-.form-label {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  color: var(--midnight-navy);
-}
-.form-input, .form-textarea {
-  width: 100%;
-  padding: 16px 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  border: 2px solid rgba(14,26,43,0.15);
-  border-radius: 4px;
-  background: var(--pure-white);
-  color: var(--midnight-navy);
-  transition: border-color 0.3s;
-}
-.form-input:focus, .form-textarea:focus {
-  outline: none;
-  border-color: var(--metallic-gold);
-}
-.form-textarea { min-height: 150px; resize: vertical; }
-
-/* FOOTER */
-.footer {
-  background: var(--midnight-navy);
-  color: var(--pure-white);
-  padding: 80px 60px 40px;
-  position: relative;
-  overflow: hidden;
-}
-.footer-bg {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15;
-}
-.footer-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 60px;
-}
-.footer-logo {
-  font-weight: 800;
-  font-size: 24px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.footer-desc {
-  color: var(--soft-gray);
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 24px;
-}
-.footer-heading {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  color: var(--metallic-gold-light);
-}
-.footer-links { list-style: none; }
-.footer-links li { margin-bottom: 12px; }
-.footer-links a {
-  color: var(--soft-gray);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-.footer-links a:hover { color: var(--metallic-gold-light); }
-.footer-bottom {
-  border-top: 1px solid rgba(201,162,74,0.2);
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  color: var(--soft-gray);
-}
-
-/* VIDEO */
-.video-container {
-  position: relative;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-}
-.video-container video,
-.video-container .video-placeholder {
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  display: block;
-}
-.video-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(14,26,43,0.3);
-  transition: background 0.3s;
-}
-.video-container:hover .video-overlay {
-  background: rgba(14,26,43,0.15);
-}
-.play-btn {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: var(--gold-gradient);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 10px 40px rgba(201,162,74,0.4);
-}
-.play-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 15px 50px rgba(201,162,74,0.6);
-}
-
-/* TESTIMONIAL CAROUSEL */
-.testimonial-carousel {
-  position: relative;
-  overflow: hidden;
-}
-.testimonial-track {
-  display: flex;
-  transition: transform 0.6s ease;
-}
-.testimonial-slide {
-  min-width: 100%;
-  padding: 0 20px;
-}
-.testimonial-text {
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 1.5;
-  font-style: italic;
-  margin-bottom: 30px;
-}
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.testimonial-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--metallic-gold);
-}
-.carousel-nav {
-  display: flex;
-  gap: 12px;
-  margin-top: 40px;
-}
-.carousel-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid var(--metallic-gold);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.carousel-dot.active {
-  background: var(--gold-gradient);
-  border-color: transparent;
-}
-
-/* STATS */
-.stat-number {
-  font-size: 72px;
-  font-weight: 900;
-  line-height: 1;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.stat-label {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--soft-gray);
-  margin-top: 12px;
-}
-
-/* NEWSLETTER */
-.newsletter-box {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(201,162,74,0.2);
-  border-radius: 8px;
-  padding: 60px;
-  text-align: center;
-}
-.newsletter-form {
-  display: flex;
-  gap: 16px;
-  max-width: 500px;
-  margin: 30px auto 0;
-}
-.newsletter-form input {
-  flex: 1;
-  padding: 16px 24px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  border: 2px solid rgba(201,162,74,0.3);
-  border-radius: 4px;
-  background: rgba(255,255,255,0.05);
-  color: var(--pure-white);
-}
-.newsletter-form input::placeholder { color: var(--soft-gray); }
-.newsletter-form input:focus {
-  outline: none;
-  border-color: var(--metallic-gold);
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .section { padding: 80px 30px; }
-  .nav { padding: 15px 30px; }
-  .nav.scrolled { padding: 12px 30px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .mobile-toggle { display: flex; }
-  .section { padding: 60px 20px; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
-  .newsletter-form { flex-direction: column; }
-  .stat-number { font-size: 48px; }
-  .testimonial-text { font-size: 20px; }
-}
-</style>
-<style>
-.hero-home { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 140px 60px 80px; }
-.hero-home::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(201,162,74,0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(139,0,0,0.1) 0%, transparent 40%); pointer-events: none; }
-.hero-content { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center; }
-.hero-label { font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--metallic-gold-light); margin-bottom: 24px; display: flex; align-items: center; gap: 16px; }
-.hero-label::before { content: ''; width: 50px; height: 2px; background: var(--gold-gradient); }
-.hero-title { font-size: clamp(42px, 5.5vw, 80px); font-weight: 900; line-height: 1.05; color: var(--pure-white); margin-bottom: 28px; }
-.hero-title .accent { background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.hero-subtitle { font-size: 18px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 40px; max-width: 540px; }
-.hero-ctas { display: flex; gap: 20px; flex-wrap: wrap; }
-.hero-video-wrapper { position: relative; }
-.hero-video-wrapper .video-container { transform: perspective(1000px) rotateY(-5deg) rotateX(3deg); transition: transform 0.6s ease; }
-.hero-video-wrapper:hover .video-container { transform: perspective(1000px) rotateY(0deg) rotateX(0deg); }
-.scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--metallic-gold-light); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; animation: float 3s ease infinite; }
-.scroll-indicator svg { width: 24px; height: 24px; }
-
-.logo-bar { padding: 50px 60px; background: var(--warm-champagne); border-bottom: 1px solid rgba(139,0,0,0.08); }
-.logo-bar-content { max-width: 1200px; margin: 0 auto; text-align: center; }
-.logo-bar-label { font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--soft-gray); margin-bottom: 30px; }
-.logo-grid { display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; opacity: 0.5; }
-.logo-item { font-weight: 700; font-size: 18px; letter-spacing: 2px; text-transform: uppercase; color: var(--midnight-navy); }
-
-.bridge-section { padding: 0; display: grid; grid-template-columns: 1fr 1fr; }
-.bridge-left { background: var(--midnight-navy); background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(201,162,74,0.04) 35px, rgba(201,162,74,0.04) 70px), repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(201,162,74,0.04) 35px, rgba(201,162,74,0.04) 70px); padding: 120px 60px; display: flex; align-items: center; justify-content: flex-end; }
-.bridge-right { background: var(--warm-champagne); padding: 120px 60px; display: flex; align-items: center; }
-.bridge-content { max-width: 520px; }
-.bridge-left .bridge-content { margin-right: 40px; text-align: right; }
-.bridge-right .bridge-content { margin-left: 40px; }
-.bridge-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
-.bridge-left .bridge-label { color: var(--metallic-gold-light); }
-.bridge-right .bridge-label { color: var(--deep-crimson); }
-.bridge-title { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; }
-.bridge-left .bridge-title { color: var(--pure-white); }
-.bridge-right .bridge-title { color: var(--deep-crimson); }
-.bridge-text { font-size: 16px; line-height: 1.8; }
-.bridge-left .bridge-text { color: rgba(255,255,255,0.7); }
-.bridge-right .bridge-text { color: var(--midnight-navy); }
-
-.offers-section { padding: 120px 60px; background: var(--warm-champagne); }
-.section-header { text-align: center; max-width: 700px; margin: 0 auto 80px; }
-.section-header .label { color: var(--deep-crimson); margin-bottom: 20px; }
-.section-header h2 { font-size: clamp(32px, 4vw, 52px); color: var(--deep-crimson); margin-bottom: 20px; }
-.section-header p { color: var(--midnight-navy); font-size: 17px; }
-.offer-card { background: var(--pure-white); border-radius: 8px; overflow: hidden; transition: all 0.4s ease; border: 1px solid rgba(139,0,0,0.08); }
-.offer-card:hover { transform: translateY(-12px); box-shadow: 0 30px 60px rgba(139,0,0,0.12); border-color: rgba(139,0,0,0.2); }
-.offer-image { width: 100%; height: 240px; object-fit: cover; display: block; }
-.offer-body { padding: 36px; }
-.offer-tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--metallic-gold); margin-bottom: 12px; }
-.offer-title { font-size: 24px; font-weight: 700; color: var(--deep-crimson); margin-bottom: 14px; }
-.offer-desc { font-size: 15px; color: var(--soft-gray); line-height: 1.7; margin-bottom: 24px; }
-.offer-link { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--deep-crimson); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: gap 0.3s; }
-.offer-link:hover { gap: 14px; }
-
-.stats-section { padding: 100px 60px; }
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; }
-.stat-item { text-align: center; padding: 40px 20px; border-right: 1px solid rgba(201,162,74,0.15); }
-.stat-item:last-child { border-right: none; }
-
-.testimonials-section { padding: 120px 60px; background: var(--warm-champagne); }
-.testimonials-section .section-header h2 { color: var(--deep-crimson); }
-
-.leadmag-section { padding: 120px 60px; }
-.leadmag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; max-width: 1200px; margin: 0 auto; align-items: center; }
-.leadmag-visual { position: relative; }
-.leadmag-visual img { width: 100%; border-radius: 8px; box-shadow: 0 30px 80px rgba(0,0,0,0.3); }
-.leadmag-content h2 { font-size: 42px; font-weight: 800; color: var(--pure-white); margin-bottom: 20px; line-height: 1.2; }
-.leadmag-content p { color: rgba(255,255,255,0.75); font-size: 17px; line-height: 1.7; margin-bottom: 30px; }
-.leadmag-checklist { list-style: none; margin-bottom: 36px; }
-.leadmag-checklist li { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; color: rgba(255,255,255,0.85); font-size: 15px; }
-.check-icon { width: 24px; height: 24px; border-radius: 50%; background: var(--gold-gradient); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.check-icon svg { width: 14px; height: 14px; }
-
-@media (max-width: 1024px) {
-  .hero-content { grid-template-columns: 1fr; gap: 50px; }
-  .hero-home { padding: 120px 30px 60px; }
-  .bridge-section { grid-template-columns: 1fr; }
-  .bridge-left, .bridge-right { padding: 80px 30px; justify-content: center; }
-  .bridge-left .bridge-content, .bridge-right .bridge-content { margin: 0; text-align: left; }
-  .stats-grid { grid-template-columns: 1fr 1fr; }
-  .stat-item { border-right: none; border-bottom: 1px solid rgba(201,162,74,0.15); }
-  .leadmag-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 768px) {
-  .stats-grid { grid-template-columns: 1fr; }
-  .hero-title { font-size: 36px; }
-  .bridge-title { font-size: 28px; }
-}
-</style>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-<nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#8B0000"/><path d="M12 36L24 12L36 36H28L24 28L20 36H12Z" fill="url(#goldLogo)"/><circle cx="24" cy="22" r="4" fill="#F5EFE3"/><defs><linearGradient id="goldLogo" x1="12" y1="12" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#C9A24A"/><stop offset="0.5" stop-color="#F2D16B"/><stop offset="1" stop-color="#C9A24A"/></linearGradient></defs></svg>
-    <span class="nav-logo-text">Beyond</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="about.html">About</a></li>
-<li><a href="speaking.html">Speaking</a></li>
-<li><a href="book.html">Book</a></li>
-<li><a href="insights.html">Insights</a></li>
-<li><a href="connect.html">Connect</a></li>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="page-loader" aria-hidden="true"><div class="page-loader__mark"></div></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-  </ul>
-  <div class="nav-right">
-    <a href="https://linkedin.com" target="_blank" class="nav-linkedin" aria-label="LinkedIn">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-    </a>
-    <a href="index.html" style="display:flex;align-items:center;">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#8B0000"/><path d="M12 36L24 12L36 36H28L24 28L20 36H12Z" fill="url(#goldLogo)"/><circle cx="24" cy="22" r="4" fill="#F5EFE3"/><defs><linearGradient id="goldLogo" x1="12" y1="12" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#C9A24A"/><stop offset="0.5" stop-color="#F2D16B"/><stop offset="1" stop-color="#C9A24A"/></linearGradient></defs></svg>
-    </a>
-    <div class="mobile-toggle">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</nav>
+  <header class="site-header" id="siteHeader">
+    <div class="container-wide site-header__inner">
+      <a href="index.html" class="brand" aria-label="Saleema Vellani home">
+        <img src="images/logo.png" alt="Saleema Vellani" class="brand__logo">
+      </a>
 
-<!-- HERO -->
-<section class="hero-home bg-navy-diamond">
-  <div class="hero-content">
-    <div class="animate-fade-up">
-      <div class="hero-label">Leadership Coach & Keynote Speaker</div>
-      <h1 class="hero-title">Unlock Growth<br><span class="accent">Beyond The Horizon</span></h1>
-      <p class="hero-subtitle">Transformative keynotes, strategic advisory, and proven frameworks that help leaders and organizations break through ceilings they didn't know existed.</p>
-      <div class="hero-ctas">
-        <a href="speaking.html" class="btn btn-gold">Book a Keynote</a>
-        <a href="book.html" class="btn btn-outline">Explore the Book</a>
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <button class="nav-overlay-close" id="navClose" aria-label="Close menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <ul class="main-nav__list">
+          <li><a href="about.html" class="main-nav__link">About</a></li>
+          <li><a href="speaking.html" class="main-nav__link">Speaking</a></li>
+          <li><a href="books.html" class="main-nav__link">Book</a></li>
+          <li><a href="courses.html" class="main-nav__link">Insights</a></li>
+          <li><a href="contact.html" class="main-nav__link">Connect</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary btn--block main-nav__cta">Book a Call</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn--primary btn--sm header-cta">Book a Call</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <div class="hero-video-wrapper animate-fade-up delay-2">
-      <div class="video-container">
-        <div class="video-placeholder" style="background: linear-gradient(135deg, #1a2d47 0%, #0E1A2B 100%); display:flex;align-items:center;justify-content:center;">
-          <div style="text-align:center;padding:40px;">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;min-height:300px;">
-              <div class="play-btn"><svg width="28" height="28" viewBox="0 0 24 24" fill="#0E1A2B"><path d="M8 5v14l11-7z"/></svg></div>
-            </div>
-            <p style="color:rgba(255,255,255,0.6);margin-top:20px;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Watch the Speaker Reel</p>
+  </header>
+  <div class="nav-scrim" id="navScrim"></div>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero hero--sm" id="hero" aria-label="Introduction">
+      <div class="hero__bg-shape" aria-hidden="true"></div>
+      <div class="hero__decor" aria-hidden="true">
+        <svg class="d1 floating" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/></svg>
+        <svg class="d2 floating floating--slow floating--delay" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" rx="20" stroke="rgba(229,137,44,0.25)" stroke-width="1.5" fill="none"/></svg>
+        <svg class="d3 floating floating--slow" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="none"/></svg>
+      </div>
+      <div class="container-wide hero--split hero__inner">
+        <div class="hero__content reveal reveal-left is-visible">
+          <span class="badge badge--on-dark">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5"/></svg>
+            Featured on TEDx &bull; Wall Street Journal &bull; Forbes
+          </span>
+          <h1 class="is-upper">UNLEASH YOUR<span class="accent-line">Full Potential</span></h1>
+          <p class="hero__lead">Transform your leadership, scale your business, and create the life you envision &mdash; with CEO coach, bestselling author, and TED speaker Saleema Vellani.</p>
+          <div class="hero__actions">
+            <a href="contact.html" class="btn btn--gold">Book a Free Call
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="courses.html" class="btn btn--outline">Explore Insights</a>
+          </div>
+          <div class="hero__meta">
+            <span class="hero__meta-item"><span class="star-row" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg></span> 5.0 Rating</span>
+            <span class="hero__meta-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.3 2.9-5.5 6.5-5.5s6.5 2.2 6.5 5.5"/><circle cx="17" cy="8.5" r="2.4"/><path d="M16 14.8c2.7.4 4.5 2.3 4.5 5.2"/></svg> 1000+ Success Stories</span>
+            <span class="hero__meta-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9z"/></svg> 30+ Countries</span>
           </div>
         </div>
-        <div class="video-overlay">
-          <div class="play-btn"><svg width="28" height="28" viewBox="0 0 24 24" fill="#0E1A2B"><path d="M8 5v14l11-7z"/></svg></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-indicator">
-    <span>Scroll</span>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-  </div>
-</section>
-
-<!-- LOGO BAR -->
-<section class="logo-bar">
-  <div class="logo-bar-content">
-    <p class="logo-bar-label">Trusted by leaders at</p>
-    <div class="logo-grid">
-      <span class="logo-item">Fortune 500</span>
-      <span class="logo-item">Global Summit</span>
-      <span class="logo-item">TEDx</span>
-      <span class="logo-item">Forbes</span>
-      <span class="logo-item">Harvard</span>
-      <span class="logo-item">McKinsey</span>
-    </div>
-  </div>
-</section>
-
-<!-- TENSION / EMPATHY BRIDGE -->
-<section class="bridge-section">
-  <div class="bridge-left">
-    <div class="bridge-content animate-fade-up">
-      <p class="bridge-label">The Tension</p>
-      <h2 class="bridge-title">Your team is capable of more&mdash;<br>but something is holding them back</h2>
-      <p class="bridge-text">Stagnant growth. Disengaged talent. Strategies that look perfect on paper but fail in execution. You've invested in training, tools, and talent&mdash;yet the breakthrough remains just out of reach. The horizon feels closer than it should.</p>
-    </div>
-  </div>
-  <div class="bridge-right">
-    <div class="bridge-content animate-fade-up delay-2">
-      <p class="bridge-label">The Bridge</p>
-      <h2 class="bridge-title">What if the ceiling<br>was never really there?</h2>
-      <p class="bridge-text">The world's most successful leaders don't work harder&mdash;they unlock potential that was always present but never accessed. Through proven frameworks, transformative storytelling, and strategic clarity, I help organizations and individuals see beyond their perceived limits and operate at their true capacity.</p>
-      <a href="about.html" class="btn btn-crimson" style="margin-top:28px;">Discover the Framework</a>
-    </div>
-  </div>
-</section>
-
-<!-- 3 OFFERS -->
-<section class="offers-section">
-  <div class="section-wide">
-    <div class="section-header animate-fade-up">
-      <p class="label">How We Can Work Together</p>
-      <h2>Three Paths to Transformation</h2>
-      <p>Whether you're looking to inspire an audience, develop your leadership, or transform your organization&mdash;there's a path designed for your journey.</p>
-    </div>
-    <div class="grid-3">
-      <div class="offer-card animate-fade-up delay-1">
-        <img src="https://placehold.co/600x400/0E1A2B/C9A24A?text=Keynote+Speaking" alt="Keynote Speaking" class="offer-image">
-        <div class="offer-body">
-          <p class="offer-tag">For Event Organizers</p>
-          <h3 class="offer-title">Keynote Speaking</h3>
-          <p class="offer-desc">Captivating keynotes on leadership, growth mindset, and organizational transformation that leave audiences energized and equipped with actionable frameworks.</p>
-          <a href="speaking.html" class="offer-link">Explore Keynotes &rarr;</a>
-        </div>
-      </div>
-      <div class="offer-card animate-fade-up delay-2">
-        <img src="https://placehold.co/600x400/8B0000/F5EFE3?text=The+Book" alt="The Book" class="offer-image">
-        <div class="offer-body">
-          <p class="offer-tag">For Leaders & Readers</p>
-          <h3 class="offer-title">Beyond The Horizon</h3>
-          <p class="offer-desc">The definitive guide to unlocking growth in yourself and your organization. A strategic playbook based on two decades of advising Fortune 500 executives.</p>
-          <a href="book.html" class="offer-link">Get the Book &rarr;</a>
-        </div>
-      </div>
-      <div class="offer-card animate-fade-up delay-3">
-        <img src="https://placehold.co/600x400/F5EFE3/8B0000?text=Strategic+Advisory" alt="Strategic Advisory" class="offer-image">
-        <div class="offer-body">
-          <p class="offer-tag">For Organizations</p>
-          <h3 class="offer-title">Strategic Advisory</h3>
-          <p class="offer-desc">Brief, high-impact engagements designed to unlock growth in leadership teams. A fresh perspective on your most complex strategic challenges.</p>
-          <a href="connect.html" class="offer-link">Start the Conversation &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats-section bg-navy-diamond">
-  <div class="stats-grid">
-    <div class="stat-item animate-fade-up">
-      <div class="stat-number"><span class="counter" data-target="500">0</span>+</div>
-      <p class="stat-label">Keynotes Delivered</p>
-    </div>
-    <div class="stat-item animate-fade-up delay-1">
-      <div class="stat-number"><span class="counter" data-target="50">0</span>K+</div>
-      <p class="stat-label">Leaders Impacted</p>
-    </div>
-    <div class="stat-item animate-fade-up delay-2">
-      <div class="stat-number"><span class="counter" data-target="12">0</span></div>
-      <p class="stat-label">Countries Reached</p>
-    </div>
-    <div class="stat-item animate-fade-up delay-3">
-      <div class="stat-number"><span class="counter" data-target="98">0</span>%</div>
-      <p class="stat-label">Would Recommend</p>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials-section">
-  <div class="section-narrow">
-    <div class="section-header animate-fade-up">
-      <p class="label">What Leaders Are Saying</p>
-      <h2>Words That Matter</h2>
-    </div>
-    <div class="testimonial-carousel animate-fade-up delay-1">
-      <div class="testimonial-track">
-        <div class="testimonial-slide">
-          <p class="testimonial-text" style="color:var(--deep-crimson);">"The keynote didn't just inspire our team&mdash;it fundamentally shifted how we think about growth. Six months later, we're still referencing the frameworks shared on stage."</p>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/120x120/0E1A2B/C9A24A?text=SM" alt="Sarah Mitchell" class="testimonial-avatar">
-            <div>
-              <p style="font-weight:700;color:var(--deep-crimson);">Sarah Mitchell</p>
-              <p style="font-size:14px;color:var(--soft-gray);">CEO, Meridian Ventures</p>
-            </div>
+        <!-- Photo: Unsplash (Kane Reinholdtsen) -->
+        <div class="hero__visual reveal reveal-right">
+          <div class="hero__media" style="background-image: url('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&amp;fit=crop&amp;w=900&amp;q=80');"></div>
+          <div class="hero__float-card">
+            <span class="hero__float-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+            <span class="hero__float-card-text">
+              <strong>Discover Your Leadership Potential</strong>
+              <span>Watch this powerful message from Saleema</span>
+            </span>
           </div>
-        </div>
-        <div class="testimonial-slide">
-          <p class="testimonial-text" style="color:var(--deep-crimson);">"Reading Beyond The Horizon felt like having a strategic advisor in my corner. The frameworks are practical, the stories are compelling, and the results are real."</p>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/120x120/8B0000/F5EFE3?text=JR" alt="James Rodriguez" class="testimonial-avatar">
-            <div>
-              <p style="font-weight:700;color:var(--deep-crimson);">James Rodriguez</p>
-              <p style="font-size:14px;color:var(--soft-gray);">Managing Partner, Apex Capital</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-slide">
-          <p class="testimonial-text" style="color:var(--deep-crimson);">"The advisory session cut through months of strategic paralysis in a single afternoon. The clarity and perspective gained were worth exponentially more than the investment."</p>
-          <div class="testimonial-author">
-            <img src="https://placehold.co/120x120/F5EFE3/8B0000?text=AK" alt="Amara Kowalski" class="testimonial-avatar">
-            <div>
-              <p style="font-weight:700;color:var(--deep-crimson);">Amara Kowalski</p>
-              <p style="font-size:14px;color:var(--soft-gray);">COO, Global Dynamics Inc.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-nav">
-        <button class="carousel-dot active"></button>
-        <button class="carousel-dot"></button>
-        <button class="carousel-dot"></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LEAD MAGNET + NEWSLETTER -->
-<section class="leadmag-section bg-navy-diamond">
-  <div class="leadmag-grid">
-    <div class="leadmag-visual animate-fade-up">
-      <img src="https://placehold.co/600x750/1a2d47/C9A24A?text=Lead+Magnet+Cover" alt="Lead Magnet">
-    </div>
-    <div class="leadmag-content animate-fade-up delay-2">
-      <p class="label" style="color:var(--metallic-gold-light);margin-bottom:20px;">Free Resource</p>
-      <h2>The Horizon Framework&trade;</h2>
-      <p>A 5-part strategic assessment used by Fortune 500 executives to identify hidden growth blockers and unlock their organization's next level of performance.</p>
-      <ul class="leadmag-checklist">
-        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0E1A2B" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span> Identify your organization's invisible ceilings</li>
-        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0E1A2B" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span> Map the 5 growth dimensions</li>
-        <li><span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#0E1A2B" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span> Get actionable next steps in 48 hours</li>
-      </ul>
-      <div class="newsletter-form" style="max-width:100%;margin:0;">
-        <input type="email" placeholder="Enter your email address">
-        <button class="btn btn-gold">Get Access</button>
-      </div>
-      <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:16px;">Join 12,000+ leaders. No spam, unsubscribe anytime.</p>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-bg" style="background-image:url('https://placehold.co/1920x600/0E1A2B/1a2d47?text=Footer+Background+Image');"></div>
-  <div class="footer-content">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo text-gold">Beyond The Horizon</div>
-        <p class="footer-desc">Leadership coach, keynote speaker, and author helping individuals and organizations unlock growth beyond their perceived limits.</p>
-        <div style="display:flex;gap:16px;">
-          <a href="https://linkedin.com" target="_blank" style="color:var(--soft-gray);transition:color 0.3s;" onmouseover="this.style.color='var(--metallic-gold-light)'" onmouseout="this.style.color='var(--soft-gray)'">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="contact.html" class="hero__float-badge">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+            Schedule Your Free Call
           </a>
         </div>
       </div>
-      <div>
-        <h4 class="footer-heading">Explore</h4>
-        <ul class="footer-links">
-          <li><a href="about.html">About</a></li>
-          <li><a href="speaking.html">Speaking</a></li>
-          <li><a href="book.html">Book</a></li>
-          <li><a href="insights.html">Insights</a></li>
-          <li><a href="connect.html">Connect</a></li>
-        </ul>
+      <div class="hero__scroll-cue">
+        <a href="#stats" aria-label="Scroll to next section">
+          <svg class="icon scroll-cue" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
       </div>
-      <div>
-        <h4 class="footer-heading">Resources</h4>
-        <ul class="footer-links">
-          <li><a href="#">The Horizon Framework</a></li>
-          <li><a href="#">Speaker Sheet</a></li>
-          <li><a href="#">Media Kit</a></li>
-          <li><a href="#">Newsletter</a></li>
-        </ul>
+    </section>
+
+    <!-- Stats bar -->
+    <section class="stats-bar section--white" id="stats" aria-label="Key statistics">
+      <div class="container-wide">
+        <div class="stats-grid reveal-group">
+          <div class="stat-item reveal reveal-up">
+            <span class="stat-item__icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.3 2.9-5.5 6.5-5.5s6.5 2.2 6.5 5.5"/><circle cx="17" cy="8.5" r="2.4"/><path d="M16 14.8c2.7.4 4.5 2.3 4.5 5.2"/></svg></span>
+            <div class="stat-item__number" data-counter data-target="500" data-suffix="+">0</div>
+            <div class="stat-item__label">Leaders Transformed</div>
+          </div>
+          <div class="stat-item reveal reveal-up">
+            <span class="stat-item__icon"><svg class="icon" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></span>
+            <div class="stat-item__number" data-counter data-target="3" data-suffix="M+">0</div>
+            <div class="stat-item__label">Lives Impacted</div>
+          </div>
+          <div class="stat-item reveal reveal-up">
+            <span class="stat-item__icon"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></span>
+            <div class="stat-item__number" data-counter data-target="200" data-suffix="+">0</div>
+            <div class="stat-item__label">Global Events</div>
+          </div>
+          <div class="stat-item reveal reveal-up">
+            <span class="stat-item__icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5"/></svg></span>
+            <div class="stat-item__number" data-counter data-target="98" data-suffix="%">0</div>
+            <div class="stat-item__label">Success Rate</div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h4 class="footer-heading">Contact</h4>
-        <ul class="footer-links">
-          <li><a href="connect.html">Speaker Inquiries</a></li>
-          <li><a href="connect.html">General Questions</a></li>
-          <li><a href="connect.html">Press & Media</a></li>
-          <li><a href="connect.html">Partnerships</a></li>
-        </ul>
+    </section>
+
+    <!-- The Power of Authentic Leadership -->
+    <section class="section section--light" aria-labelledby="power-heading">
+      <div class="container-wide grid-2">
+        <div class="reveal reveal-left">
+          <span class="badge badge--soft">Watch Now</span>
+          <h2 id="power-heading" style="margin-top: var(--space-sm);">The Power of<span class="accent-line">Authentic Leadership</span></h2>
+          <p style="margin-bottom: var(--space-md);">Discover the revolutionary framework that's helped over 500 CEOs transform their organizations and achieve unprecedented growth.</p>
+          <div style="margin-bottom: var(--space-lg);">
+            <p class="check-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg> Learn the 3 pillars of authentic leadership</p>
+            <p class="check-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg> Discover how to unlock peak performance</p>
+            <p class="check-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg> Master the art of strategic decision-making</p>
+          </div>
+          <a href="speaking.html" class="btn btn--primary">Book Me to Speak
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="reveal reveal-right">
+          <div class="video-card ph-media ph-media--dark" style="aspect-ratio: 4/3;" role="img" aria-label="Video thumbnail: The Power of Authentic Leadership, TEDx Silicon Valley 2025">
+            <span class="play-btn" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8V4z"/></svg></span>
+            <span class="ph-media__label">TEDx Silicon Valley 2025 &bull; 2.5M+ views &bull; 18 min</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Choose Your Path -->
+    <section class="section section--white" aria-labelledby="path-heading">
+      <div class="container-wide">
+        <div class="section-header reveal reveal-up">
+          <span class="badge badge--soft">Work Together</span>
+          <h2 id="path-heading" style="margin-top: var(--space-sm);">Choose Your Path to Success</h2>
+          <p>Whether you seek personalized coaching, transformative keynotes, or self-paced learning &mdash; there is a path designed for you.</p>
+        </div>
+        <!-- Photos: Unsplash (Dylan Gillis, Teemu Paananen, Brooke Cagle) -->
+        <div class="path-grid reveal-group">
+          <a href="coaching.html" class="path-card reveal reveal-up" role="img" aria-label="Executive coaching" style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&amp;fit=crop&amp;w=900&amp;q=80');">
+            <div class="path-card__content">
+              <div class="path-card__eyebrow">Transform Your Leadership</div>
+              <div class="path-card__title">CEO Coaching</div>
+              <span class="path-card__link">Discover Coaching <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a href="speaking.html" class="path-card reveal reveal-up" role="img" aria-label="Live speaking events" style="background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&amp;fit=crop&amp;w=900&amp;q=80');">
+            <div class="path-card__content">
+              <div class="path-card__eyebrow">Experience Breakthrough</div>
+              <div class="path-card__title">Keynote Speaking</div>
+              <span class="path-card__link">Book Speaking <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+          <a href="courses.html" class="path-card reveal reveal-up" role="img" aria-label="Online courses" style="background-image: url('https://images.unsplash.com/photo-1531535807748-218331acbcb4?auto=format&amp;fit=crop&amp;w=900&amp;q=80');">
+            <div class="path-card__content">
+              <div class="path-card__eyebrow">Learn At Your Pace</div>
+              <div class="path-card__title">Online Courses</div>
+              <span class="path-card__link">Browse Insights <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--dark section--navy" aria-labelledby="testimonials-heading">
+      <div class="container-wide">
+        <div class="section-header reveal reveal-up">
+          <h2 id="testimonials-heading">Real People. <span class="accent-line" style="display:inline;">Real Results.</span></h2>
+          <p>Join thousands of leaders who've transformed their lives and businesses</p>
+        </div>
+        <div class="grid-3 reveal-group">
+          <blockquote class="testimonial-card reveal reveal-up">
+            <span class="star-row" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+            </span>
+            <p class="testimonial-card__quote">&ldquo;Saleema's coaching didn't just change my business&mdash;it transformed my entire life. Within 6 months, we scaled from $2M to $10M in revenue.&rdquo;</p>
+            <footer class="testimonial-card__author">
+              <span class="avatar" aria-hidden="true">JM</span>
+              <span>
+                <cite class="testimonial-card__name">Jennifer Martinez</cite>
+                <span class="testimonial-card__role" style="display:block;">CEO, TechVision Global</span>
+              </span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card reveal reveal-up">
+            <span class="star-row" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+            </span>
+            <p class="testimonial-card__quote">&ldquo;The leadership strategies I learned made me a better CEO, partner, and parent. This is the investment that keeps giving.&rdquo;</p>
+            <footer class="testimonial-card__author">
+              <span class="avatar" aria-hidden="true">RC</span>
+              <span>
+                <cite class="testimonial-card__name">Robert Chen</cite>
+                <span class="testimonial-card__role" style="display:block;">Founder, Innovation Labs</span>
+              </span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card reveal reveal-up">
+            <span class="star-row" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6z"/></svg>
+            </span>
+            <p class="testimonial-card__quote">&ldquo;Her TEDx talk inspired me to take action. Her coaching gave me the tools to succeed beyond my wildest dreams.&rdquo;</p>
+            <footer class="testimonial-card__author">
+              <span class="avatar" aria-hidden="true">AF</span>
+              <span>
+                <cite class="testimonial-card__name">Amanda Foster</cite>
+                <span class="testimonial-card__role" style="display:block;">VP, Global Strategy</span>
+              </span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Books teaser -->
+    <section class="section section--white" aria-labelledby="books-heading">
+      <div class="container-wide grid-2">
+        <div class="reveal reveal-left">
+          <span class="badge badge--soft">Bestselling Book</span>
+          <h2 id="books-heading" style="margin-top: var(--space-sm);">Master the Principles<span class="accent-line">That Drive Success</span></h2>
+          <p style="margin-bottom: var(--space-md);">Over 500,000 copies sold worldwide. My books have become the go-to resource for executives, entrepreneurs, and leaders seeking breakthrough results.</p>
+          <p class="check-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5"/></svg>
+            <span><strong style="color: var(--color-text-heading);">Amazon #1 Bestseller</strong><br>Leadership &amp; Business Management</span>
+          </p>
+          <p class="check-item" style="margin-bottom: var(--space-lg);"><svg class="icon" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>
+            <span><strong style="color: var(--color-text-heading);">Wall Street Journal Featured</strong><br>Top 10 Business Books of 2024</span>
+          </p>
+          <a href="books.html" class="btn btn--primary">Explore Book
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <!-- Photo: Unsplash (Content Pixie) -->
+        <div class="reveal reveal-right" style="position: relative;">
+          <div class="ph-media" style="aspect-ratio: 4/3; background-image: url('https://images.unsplash.com/photo-1612969307974-ee4e57d2d5a7?auto=format&amp;fit=crop&amp;w=900&amp;q=80'); background-size: cover; background-position: center;" role="img" aria-label="Saleema Vellani's book collection with coffee and reading glasses"></div>
+          <div class="info-card" style="position:absolute; bottom: -20px; right: 20px; box-shadow: var(--shadow-lg); text-align:center;">
+            <div class="stat-item__number" style="font-size: 1.5rem;">500K+</div>
+            <div class="stat-item__label">Copies Sold</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="section section--dark" aria-labelledby="cta-heading">
+      <div class="container cta-band reveal reveal-up">
+        <span class="badge badge--on-dark">Your Next Step</span>
+        <h2 id="cta-heading" style="margin-top: var(--space-sm);">Your Transformation<span class="accent-line">Starts Today</span></h2>
+        <p>Join the thousands of leaders who have already begun their journey to extraordinary impact. Your moment is now.</p>
+        <div class="cta-band__actions">
+          <a href="contact.html" class="btn btn--gold">Get Started Now
+            <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="about.html" class="btn btn--outline">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="Saleema Vellani" class="brand__logo brand__logo--footer">
+          </a>
+          <p>Empowering leaders to achieve extraordinary results through authentic leadership and strategic vision.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="speaking.html">Speaking</a></li>
+            <li><a href="books.html">Book</a></li>
+            <li><a href="courses.html">Insights</a></li>
+            <li><a href="contact.html">Connect</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Work Together</h4>
+          <ul>
+            <li><a href="coaching.html">CEO Coaching</a></li>
+            <li><a href="speaking.html">Keynote Speaking</a></li>
+            <li><a href="courses.html">Online Courses</a></li>
+            <li><a href="contact.html">Book Speaking</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="social-row">
+            <a href="#" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:18px;height:18px;"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zm7 0h3.8v1.64h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.1v6.31h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96v5.7h-4v-12z"/></svg></a>
+            <a href="#" aria-label="X (Twitter)"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:16px;height:16px;"><path d="M18.9 3H22l-7.6 8.7L23 21h-6.9l-5.4-6.6L4.4 21H1.3l8.2-9.4L1 3h7.1l4.9 6.1L18.9 3zm-1.2 16h1.9L7.4 5H5.4l12.3 14z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" style="width:18px;height:18px;"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+          <a href="contact.html" class="btn btn--gold btn--sm" style="margin-top: var(--space-md);">Book a Free Call</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Saleema Vellani. All rights reserved.</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Beyond The Horizon. All rights reserved.</p>
-      <p style="display:flex;gap:24px;">
-        <a href="#" style="color:var(--soft-gray);text-decoration:none;">Privacy Policy</a>
-        <a href="#" style="color:var(--soft-gray);text-decoration:none;">Terms of Service</a>
-      </p>
-    </div>
-  </div>
-</footer>
-<script>
-const nav = document.querySelector('.nav');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) nav.classList.add('scrolled');
-  else nav.classList.remove('scrolled');
-});
+  </footer>
 
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, observerOptions);
-document.querySelectorAll('.animate-fade-up').forEach(el => observer.observe(el));
+  <button class="back-to-top" aria-label="Back to top">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
-function animateCounter(el) {
-  const target = parseInt(el.dataset.target);
-  const duration = 2000;
-  const step = target / (duration / 16);
-  let current = 0;
-  const timer = setInterval(() => {
-    current += step;
-    if (current >= target) { current = target; clearInterval(timer); }
-    el.textContent = Math.floor(current).toLocaleString();
-  }, 16);
-}
-const statObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-      entry.target.classList.add('counted');
-      animateCounter(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('.counter').forEach(el => statObserver.observe(el));
-
-let currentSlide = 0;
-const track = document.querySelector('.testimonial-track');
-const dots = document.querySelectorAll('.carousel-dot');
-const slides = document.querySelectorAll('.testimonial-slide');
-function goToSlide(index) {
-  if (!track) return;
-  currentSlide = index;
-  track.style.transform = 'translateX(-' + (index * 100) + '%)';
-  dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-}
-if (dots.length > 0) {
-  dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
-  setInterval(() => goToSlide((currentSlide + 1) % slides.length), 6000);
-}
-
-const mobileToggle = document.querySelector('.mobile-toggle');
-const mobileMenu = document.querySelector('.nav-links');
-if (mobileToggle) {
-  mobileToggle.addEventListener('click', () => {
-    const isOpen = mobileMenu.style.display === 'flex';
-    mobileMenu.style.display = isOpen ? 'none' : 'flex';
-    if (!isOpen) {
-      mobileMenu.style.position = 'absolute';
-      mobileMenu.style.top = '100%';
-      mobileMenu.style.left = '0';
-      mobileMenu.style.right = '0';
-      mobileMenu.style.flexDirection = 'column';
-      mobileMenu.style.background = 'rgba(14,26,43,0.98)';
-      mobileMenu.style.padding = '30px';
-      mobileMenu.style.gap = '20px';
-    }
-  });
-}
-</script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>
