@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Design Tokens — Saleema Vellani Brand System
+   Source: Saleema Vellani - Brand Guidelines.pdf
+   ========================================================================== */
+
+:root {
+  /* Colors — Core (Brand Guidelines palette) */
+  --color-primary: #8c0d24;        /* Vivid Crisdom (30%) — CTAs, dark hero/section bg */
+  --color-primary-dark: #6e0a1c;   /* darker shade for hover/gradient depth */
+  --color-primary-light: #a8172f;  /* lighter shade for gradients on dark sections */
+  --color-secondary: #0b1d45;      /* Oxford Blue (30%) — footer, alternate dark sections, ink/shadow tint */
+  --color-secondary-dark: #081530;
+  --color-secondary-light: #1c2f5c;
+  --color-accent: #e5892c;         /* Fulvous (20%) — CTA highlights, stars, 2nd headline line */
+  --color-accent-light: #f3c793;   /* pale fulvous — subtle borders/badges on dark bg */
+  --color-muted-rose: #a6444c;     /* Redwood (20%) — secondary accent, error state */
+
+  /* Colors — Neutrals */
+  --color-white: #ffffff;
+  --color-bg-light: #f5f2ef;       /* soft warm off-white section background */
+  --color-bg-light-alt: #ece7e2;
+  --color-border: #e3dcd5;
+  --color-text-heading: #0b1d45;   /* Oxford Blue doubles as ink — ties headings to the palette */
+  --color-text-body: #4a5268;
+  --color-text-muted: #8890a0;
+  --color-text-on-dark: #ffffff;
+  --color-text-on-dark-muted: #d9d3ce;
+
+  /* Colors — Semantic */
+  --color-success: #2f6b4a;        /* not in official palette — functional exception, no green in brand */
+  --color-star: #e5892c;           /* Fulvous reused for ratings */
+  --color-badge-yellow: #e5892c;   /* Fulvous reused for "gold" badge family */
+
+  /* Typography */
+  --font-base: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --fs-hero: clamp(2.25rem, 4.2vw, 3.75rem);
+  --fs-h1: clamp(2rem, 3.4vw, 3rem);
+  --fs-h2: clamp(1.75rem, 2.6vw, 2.5rem);
+  --fs-h3: 1.375rem;
+  --fs-h4: 1.125rem;
+  --fs-body-lg: 1.125rem;
+  --fs-body: 1rem;
+  --fs-body-sm: 0.9375rem;
+  --fs-small: 0.8125rem;
+  --fs-badge: 0.75rem;
+  --fs-stat: clamp(1.75rem, 2.6vw, 2.5rem);
+
+  --lh-tight: 1.12;
+  --lh-heading: 1.25;
+  --lh-body: 1.65;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Spacing scale */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-wide: 1320px;
+  --container-pad: clamp(1.25rem, 4vw, 2.5rem);
+  --header-height: 84px;
+
+  /* Radius — the guideline's own "Brand in Action" mockup shows a pill CTA button,
+     so the existing rounded scale is kept rather than sharpened toward the logo's angularity */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Shadows — tinted with Oxford Blue instead of neutral black */
+  --shadow-sm: 0 2px 8px rgba(11, 29, 69, 0.08);
+  --shadow-md: 0 8px 24px rgba(11, 29, 69, 0.10);
+  --shadow-lg: 0 16px 48px rgba(11, 29, 69, 0.16);
+  --shadow-card: 0 4px 20px rgba(11, 29, 69, 0.09);
+  --shadow-header: 0 2px 16px rgba(11, 29, 69, 0.08);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.35s;
+  --dur-slow: 0.6s;
+
+  /* Gradients */
+  --gradient-dark: linear-gradient(135deg, #8c0d24 0%, #5c0817 100%);
+  --gradient-dark-radial: radial-gradient(circle at 20% 20%, rgba(229, 137, 44, 0.18), transparent 60%);
+  --gradient-overlay: linear-gradient(180deg, rgba(140, 13, 36, 0) 0%, rgba(90, 8, 23, 0.88) 100%);
+  --gradient-navy: linear-gradient(135deg, #0b1d45 0%, #050d1f 100%);
+
+  /* Z-index scale */
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}

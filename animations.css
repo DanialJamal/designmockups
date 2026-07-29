@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Animations — keyframes + scroll-reveal utility classes
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ripple-anim {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(229, 137, 44, 0.45); }
+  100% { box-shadow: 0 0 0 16px rgba(229, 137, 44, 0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll-reveal (driven by IntersectionObserver in animations.js)
+   Base state: hidden + offset. .is-visible triggers the transition in.
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(32px);
+}
+
+.reveal-left {
+  transform: translateX(-36px);
+}
+
+.reveal-right {
+  transform: translateX(36px);
+}
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger helper — apply alongside .reveal on children of a .reveal-group */
+.reveal-group .reveal:nth-child(1) { transition-delay: 0.05s; }
+.reveal-group .reveal:nth-child(2) { transition-delay: 0.15s; }
+.reveal-group .reveal:nth-child(3) { transition-delay: 0.25s; }
+.reveal-group .reveal:nth-child(4) { transition-delay: 0.35s; }
+.reveal-group .reveal:nth-child(5) { transition-delay: 0.45s; }
+.reveal-group .reveal:nth-child(6) { transition-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Floating decorative elements
+   -------------------------------------------------------------------------- */
+.floating {
+  animation: float-y 6s var(--ease-in-out) infinite;
+}
+
+.floating--slow {
+  animation: float-slow 9s var(--ease-in-out) infinite;
+}
+
+.floating--delay {
+  animation-delay: 1.2s;
+}
+
+.scroll-cue {
+  animation: bounce-down 2s var(--ease-in-out) infinite;
+}
+
+.pulse {
+  animation: pulse-ring 2.4s var(--ease-out) infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Page fade-in on load
+   -------------------------------------------------------------------------- */
+body {
+  animation: fade-in 0.5s var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating,
+  .floating--slow,
+  .scroll-cue,
+  .pulse {
+    animation: none;
+  }
+}
